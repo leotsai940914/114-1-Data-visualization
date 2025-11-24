@@ -55,6 +55,8 @@ def call_data():
             result = missing_reporter()
         elif "資料型態" in data["message"]:
             result = data_type_reporter()
+        elif "筆數" in data["message"]:
+            result = f"資料共有 {len(df)} 筆。"
         else:
             result = "目前尚未開發此功能。"
         return result
